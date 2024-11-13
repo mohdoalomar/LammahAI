@@ -17,23 +17,33 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults: 
+      run:
+        working-directory: ./LammahAI
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
+      - name: List directory contents
+        run: ls -la
+        
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
+          cache: 'npm'
           
       - name: Install Dependencies
         run: |
-          npm install
-          npm install -g vite  # Install Vite globally
+          npm ci || npm install
+          
+      - name: Debug - show directory structure
+        run: |
+          pwd
+          ls -R
           
       - name: Build Project
-        run: |
-          npx vite build      # Use npx to run vite
+        run: npm run build
           
       - name: Setup Pages
         uses: actions/configure-pages@v4
