@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://mohdoalomar.io/LammahAI", 
   "dependencies": {
     "gh-pages": "^6.2.0",
     "react": "^18.3.1",
