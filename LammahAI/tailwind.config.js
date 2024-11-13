@@ -10,8 +10,9 @@ export default {
         'LammahBlack': '#000000',
         'LammahBrown': '#6C351A',
         'LammahRed': '#8D030A',
-        'LammahBiegeBg': '#E0C4A3',
-        'LammahGreen': "#668535"
+        'LammahBiege': '#E0C4A3',
+        'LammahGreen': "#668535",
+        'LammmahBG': '#EFE6DA'
       },
       fontFamily: {
         arian: ['Arian', 'sans-serif'],
