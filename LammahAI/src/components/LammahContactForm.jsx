@@ -125,14 +125,14 @@ const LammahContactForm = ({isFormVisible}) => {
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:gap-12 animate-fade-in">
           {/* Form Section */}
-          <div className="lg:w-2/3 mt-8 lg:mt-0 animate-fade-right animate-duration-700">
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden border border-LammahBrown/20 animate-slide-up">
+          <div className="lg:w-2/3 mt-8 lg:mt-0 animate-fade-right animate-duration-700 lg:animate-delay-75 animate-delay-1000 ">
+            <div className="bg-LammahBiege/25 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden border border-LammahBrown/20 animate-slide-up">
               {/* Header */}
-              <div className="bg-gradient-to-r from-LammahBrown to-LammahRed p-8">
-                <h2 className="text-3xl font-bold text-white text-right animate-fade-in">
+              <div className="bg-gradient-to-r from-LammahBrown/85 to-LammahBrown p-8">
+                <h2 className="text-3xl font-bold text-white text-right animate-fade-left duration-500">
                   تواصل معنا
                 </h2>
-                <p className="text-white/90 mt-2 text-right animate-fade-in delay-100">
+                <p className="text-white/90 mt-2 text-right animate-fade-up duration-700 delay-200 ">
                   نحن نتطلع للتواصل معك
                 </p>
               </div>
@@ -192,7 +192,7 @@ const LammahContactForm = ({isFormVisible}) => {
                   type="submit"
                   disabled={submitStatus === "loading" || submitStatus === "success"}
                   className={`
-                    w-full py-3 px-6 rounded-lg text-white font-medium
+                    w-full py-3 px-6 rounded-lg text-white font-medium text-lg lg:text-xl
                     transition-all duration-300 ease-in-out transform
                     ${submitStatus === "idle"
                       ? "bg-LammahBrown hover:bg-LammahGreen hover:-translate-y-1 hover:shadow-lg"

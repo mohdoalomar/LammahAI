@@ -50,8 +50,9 @@ const Subscriptions = () => {
       features: [
         "أدوات كتابة أساسية",
         "وصول محدود لميزات تطوير القصة",
-        "طلبات الذكاء الاصطناعي مع فترة",
-        "استخدام لمدة 30 يوما"
+        <span>
+        طلبات الذكاء الاصطناعي مع فترة<br/>  استخدام لمدة 30 يوما
+        </span>
       ],
       delay: 75,
       duration: 500,
@@ -105,22 +106,23 @@ const Subscriptions = () => {
     }
   ];
 
-  const tiers =  window.innerWidth > 768 ? tiersOnDesktop : tiersOnMobile;
+  const tiers = window.innerWidth > 768 ? tiersOnDesktop : tiersOnMobile;
 
   return (
     <div className="max-w-full mx-auto p-6">
       <h1 className="text-4xl lg:text-5xl text-center mb-12 text-LammahBrown font-bold lg:animate-delay-1000 animate-fade-up">
         الدراهم
+        <div className="w-24 h-1 bg-LammahRed mx-auto rounded-full mt-3" />
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {tiers.map((tier, index) => (
           <div
             key={index}
             ref={tier.ref}
-            className={`text-right ${tier.isVisible ? `animate-fade-up animate-duration-${tier.duration} animate-delay-${tier.delay}` : 'opacity-0'}`}
+            className={`text-right h-full ${tier.isVisible ? `animate-fade-up animate-duration-${tier.duration} animate-delay-${tier.delay}` : 'opacity-0'}`}
           >
-            <div className="rounded-2xl overflow-hidden shadow-lg bg-white/10 text-LammahBrown border border-LammahBrown/10">
-              <div className="p-6">
+            <div className="rounded-2xl overflow-hidden shadow-lg bg-LammahBiege/25 text-LammahBrown border border-LammahBrown/10 h-full flex flex-col">
+              <div className="p-6 flex-grow">
                 <div className="rounded-full bg-LammahBrown text-white text-center py-2 px-8 mb-6 w-full border border-white">
                   <h2 className="text-xl font-bold">{tier.name}</h2>
                 </div>
@@ -132,9 +134,9 @@ const Subscriptions = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="text-2xl font-bold text-center mt-auto">
-                  {tier.price}
-                </div>
+              </div>
+              <div className="text-2xl font-bold text-center py-4 border-t border-LammahBrown/10">
+                {tier.price}
               </div>
             </div>
           </div>

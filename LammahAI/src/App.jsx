@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import useLazyLoad from './hooks/useLazyLoad';
 import LammahContactForm from "./components/LammahContactForm";
 import Subscriptions from "./components/Subscriptions";
+import AboutLammah from './components/AboutLammah';
+import ProblemSolutionSlides from './components/ProblemSolutionsSlides';
 function App() {
   const [formRef, isFormVisible] = useLazyLoad({
     threshold: 0.3,
@@ -13,15 +15,18 @@ function App() {
       <div className="container mx-auto px-4 py-8"> 
         <div className="flex flex-col justify-center items-center">
           <div className="flex justify-center">
-            <bdi className="font-arian font-bold text-3xl lg:text-6xl animate-fade-left animate-duration-1000">
-              مرحبا بك في لـمّـاح
+            <bdi className="font-arian font-bold text-3xl lg:text-6xl animate-fade-left animate-duration-1000 flex justify-center flex-col items-center lg:flex-row">
+            
+              <span className='lg:my-auto  lg:text-7xl'> هلا بك في </span> 
+              <img src='LammahNoCatchPhrase.png' className='lg:w-1/4 w-[30%] mr-2 '/>
             </bdi>
           </div>
-          <img 
-            className="lg:w-2/5 w-full animate-fade-left animate-duration-1000 mr-5" 
-            src="LammahAIFullLogo-Cropped.png"
-            alt="Lammah AI Logo"
-          />
+          <div className='mx-auto'>
+          <AboutLammah />
+          </div>
+        </div>
+        <div className="mx-auto mt-20">
+          <ProblemSolutionSlides />
         </div>
         <div className="mx-auto">
           <Subscriptions />
