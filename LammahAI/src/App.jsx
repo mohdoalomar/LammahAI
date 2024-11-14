@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import useLazyLoad from './hooks/useLazyLoad';
 import LammahContactForm from "./components/LammahContactForm";
 import Subscriptions from "./components/Subscriptions";
-import { DottedPattern } from './components/BackgroundPattern';
 function App() {
   const [formRef, isFormVisible] = useLazyLoad({
     threshold: 0.3,
