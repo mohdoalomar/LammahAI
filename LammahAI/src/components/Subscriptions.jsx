@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Subscriptions = () => {
- const tiers = [
+ const tiersOnDesktop = [
     {
         name: "حريف",
         price: "375 SAR",
@@ -41,10 +41,51 @@ const Subscriptions = () => {
         duration : 500
       }
   ];
+  const tiersOnMobile = [
+    {
+      name: "هاوي",
+      price: "0 SAR",
+      features: [
+        "أدوات كتابة أساسية",
+        "وصول محدود لميزات تطوير القصة",
+        "طلبات الذكاء الاصطناعي مع فترة",
+        "استخدام لمدة 30 يوما"
+      ],
+      delay: 75,
+      duration : 500
+    },
+    {
+      name: "رهيب",
+      price: "150 SAR",
+      title: ": كل ما هو متضمن في الباقة الأساسية، بالإضافة إلى",
+      features: [
+        "أدوات كتابة أساسية بدون قيود",
+        "أدوات ما قبل الانتاج الأساسية",
+        "طلبات وصور ذكاء اصطناعي غير محدودة"
+      ],
+      delay: 300,
+      duration : 700
+    },
+    {
+      name: "حريف",
+      price: "375 SAR",
+      title: ": كل ما هو متضمن في باقة المبدعين، بالإضافة إلى",
+      features: [
+        "أدوات كتابة متقدمة مع تحليلات",
+        "مجموعة أدوات ما قبل الإنتاج البالغة",
+        "صور عالية الجودة"
+      ],
+      delay:700 ,
+      duration : 1000
+    }
+    
+  ];
+  let tiers
+  window.innerWidth > 768 ? tiers = tiersOnDesktop : tiers = tiersOnMobile;
 
   return (
     <div className="max-w-full mx-auto p-6">
-      <h1 className="text-4xl lg:text-5xl text-center mb-12 text-LammahBrown font-bold">الدراهم</h1>
+      <h1 className="text-4xl lg:text-5xl text-center mb-12 text-LammahBrown font-bold lg:animate-delay-1000 animate-fade-up">الدراهم</h1>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
       {tiers.map((tier, index) => (
       <div className={` text-right animate-fade-up animate-duration-${tier.duration} animate-delay-${tier.delay}`}>
@@ -59,9 +100,9 @@ const Subscriptions = () => {
               </div>
               
               <ul className="space-y-4 mb-6">
-              <li className="text-base" >{tier.title}</li>
+              <li className="text-base font-semibold" >{tier.title}</li>
                 {tier.features.map((feature, fIndex) => (
-                  <li key={fIndex} className="text-base list-disc" style={{direction : 'rtl'}}>{feature}</li>
+                  <li key={fIndex} className="text-base  list-disc" style={{direction : 'rtl'}}>{feature}</li>
                 ))}
               </ul>
               

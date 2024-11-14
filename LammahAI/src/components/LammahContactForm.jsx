@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CheckCircle, Loader2, AlertCircle, XCircle } from "lucide-react";
 
-const LammahContactForm = () => {
+const LammahContactForm = ({isFormVisible}) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -121,6 +121,7 @@ const LammahContactForm = () => {
 
   return (
     <div className="min-h-screen bg-LammmahBG">
+    {isFormVisible &&
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:gap-12 animate-fade-in">
           {/* Form Section */}
@@ -239,6 +240,8 @@ const LammahContactForm = () => {
           </div>
         </div>
       </div>
+      
+    }
     </div>
   );
 };
