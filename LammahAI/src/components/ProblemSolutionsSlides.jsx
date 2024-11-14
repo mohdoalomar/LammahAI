@@ -82,7 +82,12 @@ const ProblemSolutionSlides = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-LammahBrown mb-4">
             حول مشاكلك إلى حلول
           </h1>
-          <div className="w-24 h-1 bg-LammahRed mx-auto rounded-full" />
+          <motion.div
+            className="h-1.5 w-32 mx-auto rounded-full bg-LammahRed"
+            initial={{ width: 0 }}
+            animate={isFirstVisible ? { width: 128 } : { width: 0 }}
+            transition={{ delay: 0.5, duration: 1 }}
+          />
         </motion.div>
 
         {/* Main Content with Animated Border */}

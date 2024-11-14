@@ -5,6 +5,7 @@ import Subscriptions from "./components/Subscriptions";
 import AboutLammah from './components/AboutLammah';
 import ProblemSolutionSlides from './components/ProblemSolutionsSlides';
 import Services from './components/Services';
+import OperationsProcess from './components/OperationProcess';
 function App() {
   const [formRef, isFormVisible] = useLazyLoad({
     threshold: 0.3,
@@ -31,6 +32,9 @@ function App() {
         </div>
         <div className="mx-auto mt-32">
           <Services />
+        </div>
+        <div className="mx-auto mt-32">
+          <OperationsProcess />
         </div>
         <div className="mx-auto mt-32">
           <Subscriptions />

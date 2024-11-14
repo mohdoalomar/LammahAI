@@ -1,6 +1,6 @@
 import React from 'react';
 import useLazyLoad from '../hooks/useLazyLoad';
-
+import { motion } from 'framer-motion';
 const Subscriptions = () => {
   const [firstRef, isFirstVisible] = useLazyLoad({
     threshold: 0.1,
@@ -110,9 +110,14 @@ const Subscriptions = () => {
 
   return (
     <div className="max-w-full mx-auto p-6">
-      <h1 className="text-4xl lg:text-5xl text-center mb-12 text-LammahBrown font-bold lg:animate-delay-1000 animate-fade-up">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl text-center mb-12 text-LammahBrown font-bold lg:animate-delay-1000 animate-fade-up">
         الدراهم
-        <div className="w-24 h-1 bg-LammahRed mx-auto rounded-full mt-3" />
+        <motion.div
+            className="h-1.5 w-32 mx-auto rounded-full bg-LammahRed mt-5"
+            initial={{ width: 0 }}
+            animate={isFirstVisible ? { width: 128 } : { width: 0 }}
+            transition={{ delay: 0.5, duration: 1 }}
+          />
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {tiers.map((tier, index) => (
