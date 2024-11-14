@@ -4,6 +4,7 @@ import LammahContactForm from "./components/LammahContactForm";
 import Subscriptions from "./components/Subscriptions";
 import AboutLammah from './components/AboutLammah';
 import ProblemSolutionSlides from './components/ProblemSolutionsSlides';
+import Services from './components/Services';
 function App() {
   const [formRef, isFormVisible] = useLazyLoad({
     threshold: 0.3,
@@ -25,13 +26,16 @@ function App() {
           <AboutLammah />
           </div>
         </div>
-        <div className="mx-auto mt-20">
+        <div className="mx-auto mt-32">
           <ProblemSolutionSlides />
         </div>
-        <div className="mx-auto">
+        <div className="mx-auto mt-32">
+          <Services />
+        </div>
+        <div className="mx-auto mt-32">
           <Subscriptions />
         </div>
-        <div className="mx-auto mt-20" ref={formRef}>
+        <div className="mx-auto mt-32" ref={formRef}>
           <LammahContactForm isFormVisible={isFormVisible} />
         </div>
       </div>
