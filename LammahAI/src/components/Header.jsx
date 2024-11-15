@@ -90,7 +90,7 @@ const Header = ({ sectionRefs }) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 bg-LammmahBG/0 rounded-lg shadow-lg">
+          <div className="lg:hidden mt-4 bg-LammmahBG/0 rounded-lg ">
             <div className="flex flex-col space-y-3 p-4">
               {navItems.map(item => (
                 <button
