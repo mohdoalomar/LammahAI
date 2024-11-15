@@ -4,15 +4,15 @@ import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, CartesianGrid} from "
 
 const data = [
   {
-    name: "People",
+    name: "الناس",
     value: 10,
   },
   {
-    name: "Sales",
+    name: "المبيعات",
     value: 60,
   },
   {
-    name: "Market",
+    name: "السوق",
     value: 2,
   },
 ];
