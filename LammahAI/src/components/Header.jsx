@@ -71,7 +71,7 @@ const Header = ({ sectionRefs }) => {
                   ${index !== navItems.length - 1 ? 'ml-4' : ''} 
                   ${activeSection === item.id 
                     ? 'bg-LammahBrown text-LammahBiege' 
-                    : 'text-LammahBrown hover:bg-LammahBrown/10 bg-LammmahBG'
+                    : 'text-LammahBrown hover:bg-LammahBrown/10 bg-LammmahBG/0'
                   }`}
               >
                 {item.label}
@@ -81,7 +81,7 @@ const Header = ({ sectionRefs }) => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-LammahBrown bg-LammmahBG"
+            className="lg:hidden text-LammahBrown bg-LammmahBG/0"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -90,7 +90,7 @@ const Header = ({ sectionRefs }) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 bg-LammmahBG rounded-lg shadow-lg">
+          <div className="lg:hidden mt-4 bg-LammmahBG/0 rounded-lg shadow-lg">
             <div className="flex flex-col space-y-3 p-4">
               {navItems.map(item => (
                 <button
@@ -99,7 +99,7 @@ const Header = ({ sectionRefs }) => {
                   className={`px-4 py-2 rounded-lg text-right transition-colors duration-300 font-arian
                     ${activeSection === item.id 
                       ? 'bg-LammahBrown text-LammahBiege' 
-                      : 'text-LammahBrown hover:bg-LammahBrown/10 bg-LammmahBG'
+                      : 'text-LammahBrown hover:bg-LammahBrown/10 bg-LammmahBG/0'
                     }`}
                 >
                   {item.label}
