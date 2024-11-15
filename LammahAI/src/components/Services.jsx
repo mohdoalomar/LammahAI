@@ -16,7 +16,7 @@ const ServiceCard = ({ title, delay, className }) => (
   </motion.div>
 );
 
-const Services = () => {
+const Services = ({isVisible}) => {
   const [headerRef, isHeaderVisible] = useLazyLoad({
     threshold: 0.1,
     rootMargin: "50px",
@@ -42,6 +42,7 @@ const Services = () => {
   ];
 
   return (
+
     <div className="relative w-full bg-LammmahBG p-8 lg:p-12">
       {/* Decorative lines */}
       <DiagonalLines direction="right" />
@@ -75,7 +76,6 @@ const Services = () => {
               delay={index * 0.1}
               isVisible={isServicesVisible}
               className={`${
-                // Conditionally set col-span-2 for specific items
                 index === 4 ? "lg:col-span-2" : ""
               }`}
             />

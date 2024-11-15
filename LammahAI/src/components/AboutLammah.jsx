@@ -1,5 +1,6 @@
-export default function AboutLammah() {
+export default function AboutLammah({isVisible}) {
   return (
+    isVisible &&
     <>
       <div className="flex flex-col lg:flex-row lg:items-start lg:gap-0 justify-center  ">
         <img 

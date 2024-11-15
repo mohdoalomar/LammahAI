@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle, XCircle } from "lucide-react";
 import useLazyLoad from "../hooks/useLazyLoad";
-const ProblemSolutionSlides = () => {
+const ProblemSolutionSlides = ({isVisible}) => {
     const [firstRef, isFirstVisible] = useLazyLoad({
       threshold: 0.1,
       rootMargin: "25px"
@@ -67,6 +67,7 @@ const ProblemSolutionSlides = () => {
   ];
 
   return (
+    
     <div className="w-full bg-LammmahBG p-4 md:p-8 lg:p-12">
       <motion.div
         initial="hidden"

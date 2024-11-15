@@ -2,9 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import useLazyLoad from '../hooks/useLazyLoad';
 
-const OperationsProcess = () => {
+const OperationsProcess = ({isOperVisible}) => {
+  const [cardRef, isCardVisible] = useLazyLoad({
+    threshold: 0.9,
+    rootMargin: '50px'
+  });
+  const [card2Ref, isCard2Visible] = useLazyLoad({
+    threshold: 0.9,
+    rootMargin: '50px'
+  });
   const [sectionRef, isVisible] = useLazyLoad({
-    threshold: 0.2,
+    threshold: 0.5,
     rootMargin: '100px'
   });
 
@@ -22,8 +30,8 @@ const OperationsProcess = () => {
   const cardVariants = {
     hidden: { 
       opacity: 0,
-      y: 30,
-      scale: 0.95
+      y: 70,
+      scale: 0.75
     },
     visible: {
       opacity: 1,
@@ -55,19 +63,20 @@ const OperationsProcess = () => {
 
   const renderCard = (item, index, borderColor) => (
     <motion.div
+    key={index}
       variants={cardVariants}
       whileHover="hover"
       className={`bg-white/40 rounded-xl p-6 shadow-lg 
-        border-r-4 ${borderColor} transform`}
+        border-r-4 ${borderColor} animate-fade-up `}
     >
-      <div className="flex items-center justify-end gap-4">
+      <div className={`flex items-center justify-end gap-4 animate-fade-up animate-delay-${item.delay}`}>
         <div className="flex flex-col items-end">
-          <span className="text-lg font-medium text-gray-800">{item.text}</span>
-          <span className="text-sm text-gray-500 mt-1">
+          <span className={`text-lg font-medium text-gray-800 text-right animate-fade-left animate-delay-${item.delay+200}`}>{item.text}</span>
+          <span className={`text-sm text-gray-500 mt-1 text-right animate-fade-right animate-delay-${item.delay+200} animate-duration-1000`}>
             {item.description || '\u200E'}
           </span>
         </div>
-        <div className="text-2xl bg-white p-3 rounded-full shadow-md">
+        <div className={`text-2xl bg-white p-3 rounded-full shadow-md animate-fade-down animate-duration-700 animate-delay-${item.delay+200}`}>
           {item.icon}
         </div>
       </div>
@@ -75,6 +84,7 @@ const OperationsProcess = () => {
   );
 
   return (
+
     <div className="bg-LammmahBG p-8 relative overflow-hidden">
       {/* Decorative SVG Background */}
       <svg className="absolute top-0 right-0 w-full h-full pointer-events-none" viewBox="0 0 100 100">
@@ -142,9 +152,10 @@ const OperationsProcess = () => {
           />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-16 relative">
+        <div className="grid md:grid-cols-2 gap-16 relative" >
           {/* Channels Section */}
-          <motion.div variants={containerVariants} className="space-y-8">
+          <motion.div variants={containerVariants} className="space-y-8" ref={cardRef}>
+          {isCardVisible && <>
             <h2 className="text-3xl text-LammahBrown font-bold text-right mb-10 
               relative before:content-[''] before:absolute before:right-0 before:-bottom-2 
               before:w-16 before:h-1 before:bg-LammahGreen before:rounded-full">
@@ -155,24 +166,29 @@ const OperationsProcess = () => {
                 { 
                   text: 'منصة ويب وتطبيق جوال',
                   icon: '💻',
-                  description: 'منصة رقمية متكاملة'
+                  description: 'منصة رقمية متكاملة',
+                  delay : 100
                 },
                 {
                   text: 'شراكات مع مراكز الإنتاج',
                   icon: '🤝',
-                  description: 'تعاون استراتيجي'
+                  description: 'تعاون استراتيجي',
+                  delay : 300
                 },
                 {
                   text: 'حضور المعارض والمهرجانات',
                   icon: '🎪',
-                  description: 'تواجد فعال'
+                  description: 'تواجد فعال',
+                  delay : 500
                 }
               ].map((item, index) => renderCard(item, index, 'border-LammahGreen'))}
             </motion.div>
+            </>}
           </motion.div>
 
           {/* Customer Segments Section */}
-          <motion.div variants={containerVariants} className="space-y-8">
+          <motion.div variants={containerVariants} className="space-y-8" ref={card2Ref}>
+          {isCard2Visible && <>
             <h2 className="text-3xl text-LammahBrown font-bold text-right mb-10
               relative before:content-[''] before:absolute before:right-0 before:-bottom-2 
               before:w-16 before:h-1 before:bg-LammahRed before:rounded-full">
@@ -183,40 +199,26 @@ const OperationsProcess = () => {
                 {
                   text: 'صناع الأفلام المستقلين',
                   icon: '🎬',
-                  description: 'مبدعون مستقلون'
+                  description: 'مبدعون مستقلون',
+                  delay : 100
                 },
                 {
                   text: 'شركات الإنتاج',
                   icon: '🏢',
-                  description: 'مؤسسات محترفة'
+                  description: 'مؤسسات محترفة',
+                  delay : 300
                 },
                 {
                   text: 'المبدعين في قطاع الإعلام',
                   icon: '✨',
-                  description: 'محتوى إبداعي'
+                  description: 'محتوى إبداعي',
+                  delay : 500
                 }
               ].map((item, index) => renderCard(item, index, 'border-LammahRed'))}
             </motion.div>
+            </>}
           </motion.div>
 
-          {/* Floating element */}
-          <motion.div
-            className="absolute -z-10 w-64 h-64 rounded-full bg-LammahBiege opacity-10 blur-3xl"
-            animate={{
-              x: [0, 100, 0],
-              y: [0, 50, 0],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            style={{
-              top: '20%',
-              right: '-20%'
-            }}
-          />
         </div>
       </motion.div>
     </div>

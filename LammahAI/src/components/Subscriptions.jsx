@@ -1,7 +1,7 @@
 import React from 'react';
 import useLazyLoad from '../hooks/useLazyLoad';
 import { motion } from 'framer-motion';
-const Subscriptions = () => {
+const Subscriptions = ({isVisible}) => {
   const [firstRef, isFirstVisible] = useLazyLoad({
     threshold: 0.1,
     rootMargin: '25px'
@@ -109,6 +109,7 @@ const Subscriptions = () => {
   const tiers = window.innerWidth > 768 ? tiersOnDesktop : tiersOnMobile;
 
   return (
+
     <div className="max-w-full mx-auto p-6">
       <h1 className="text-3xl md:text-4xl lg:text-5xl text-center mb-12 text-LammahBrown font-bold lg:animate-delay-1000 animate-fade-up">
         الدراهم
