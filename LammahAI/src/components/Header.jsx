@@ -6,13 +6,13 @@ const Header = ({ sectionRefs }) => {
   const [activeSection, setActiveSection] = useState('about');
 
   const navItems = [
-    { id: 'about', label: 'عن لمة', ref: sectionRefs.AboutRef },
+    { id: 'about', label: 'مين لماح', ref: sectionRefs.AboutRef },
     { id: 'problem', label: 'المشكلة والحل', ref: sectionRefs.problemRef },
-    { id: 'services', label: 'خدماتنا', ref: sectionRefs.serviceRef },
-    { id: 'operations', label: 'عملية التشغيل', ref: sectionRefs.operationRef },
-    { id: 'subscriptions', label: 'الاشتراكات', ref: sectionRefs.SubscriptionsRef },
-    { id: 'statistics', label: 'إحصائيات', ref: sectionRefs.statisticsRef },
-    { id: 'chat', label: 'تواصل معنا', ref: sectionRefs.chatRef },
+    { id: 'services', label: 'الدبرة', ref: sectionRefs.serviceRef },
+    { id: 'operations', label: 'طريقة التشغيل', ref: sectionRefs.operationRef },
+    { id: 'subscriptions', label: 'الدراهم', ref: sectionRefs.SubscriptionsRef },
+    { id: 'statistics', label: 'الإحصائيات', ref: sectionRefs.statisticsRef },
+    { id: 'chat', label: 'جرب لمّاح', ref: sectionRefs.chatRef },
     { id: 'contact', label: 'نموذج التواصل', ref: sectionRefs.formRef }
   ];
 
@@ -57,7 +57,7 @@ const Header = ({ sectionRefs }) => {
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-LammmahBG/90 backdrop-blur-sm z-50 shadow-md">
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container px-4 py-4 ">
         <div className="flex justify-between items-center">
           <img src="LammahNoCatchPhrase.png" alt="Lammah Logo" className="h-12" />
           
