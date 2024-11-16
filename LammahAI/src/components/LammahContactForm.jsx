@@ -133,7 +133,7 @@ const LammahContactForm = ({isFormVisible}) => {
                   تواصل معنا
                 </h2>
                 <p className="text-white/90 mt-2 text-right animate-fade-up duration-700 delay-200 ">
-                  نحن نتطلع للتواصل معك
+                   ودنا نتواصل معك
                 </p>
               </div>
 
@@ -160,7 +160,7 @@ const LammahContactForm = ({isFormVisible}) => {
                         onBlur={handleBlur}
                         className={inputClasses(field)}
                         rows={4}
-                        placeholder="اخبرنا المزيد عنك..."
+                        placeholder="...اخبرنا المزيد عنك"
                       />
                     ) : (
                       <input
@@ -209,7 +209,7 @@ const LammahContactForm = ({isFormVisible}) => {
                   {submitStatus === "success" && <CheckCircle size={20} />}
                   {submitStatus === "error" && <AlertCircle size={20} />}
                   {submitStatus === "idle" ? "ارسل" :
-                   submitStatus === "loading" ? "جاري الارسال..." :
+                   submitStatus === "loading" ? "...جاري الارسال" :
                    submitStatus === "success" ? "تم الارسال بنجاح!" :
                    "يرجى تصحيح الأخطاء"}
                 </button>
@@ -223,13 +223,18 @@ const LammahContactForm = ({isFormVisible}) => {
               ودّنا نعرفك أكثر
             </h1>
             <p className="text-xl lg:text-2xl text-right leading-relaxed animate-fade-left animate-duration-700 animate-delay-300">
+            <bdi>
               علّمنا عن شغلك وشغفك، ووش هي التحديات اللي تواجهك في عالم الإنتاج.
               لمّاح صُمم ليخدمك ويوفر لك حلول ذكية، وما نرتاح إلا لين نلقى لك أفضل
               الحلول.
+              </bdi>
             </p>
+            
             <p className="text-xl lg:text-2xl text-right leading-relaxed animate-fade-left animate-duration-700 animate-delay-500">
+             <bdi>
               سواءً كنت مخرج، منتج، كاتب، أو بأي تخصص ثاني – تواصل معنا وخلك
               شريك برحلتنا
+              </bdi>
             </p>
             <a 
               href="mailto:LAMMAH.AI.KSA@GMAIL.COM"

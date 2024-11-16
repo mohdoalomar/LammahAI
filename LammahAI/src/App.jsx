@@ -97,6 +97,21 @@ function App() {
           <LammahContactForm isFormVisible={isFormVisible} />
         </div>
       </div>
+      <div className="w-full h-36 bg-LammahBrown text-LammmahBG flex justify-center gap-32 items-center" >
+      <a 
+            href="tel:966566619193" 
+            className="hover:text-amber-200 transition-colors"
+          >
+            +966 56 661 9193
+          </a>
+          <a 
+            href="mailto:LAMMAH.AI.KSA@gmail.com"
+            className="hover:text-amber-200 transition-colors"
+          >
+            LAMMAH.AI.KSA@gmail.com
+          </a>
+          <p className="text-sm">©2024 LAMMAH AI</p>
+      </div>
     </div>
   );
 }
