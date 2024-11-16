@@ -97,7 +97,7 @@ function App() {
           <LammahContactForm isFormVisible={isFormVisible} />
         </div>
       </div>
-      <div className="w-full h-36 bg-LammahBrown text-LammmahBG flex justify-center gap-32 items-center" >
+      <div className="w-full h-36 bg-LammahBrown text-LammmahBG flex flex-col lg:flex-row justify-center lg:gap-32 items-center" >
       <a 
             href="tel:966566619193" 
             className="hover:text-amber-200 transition-colors"
