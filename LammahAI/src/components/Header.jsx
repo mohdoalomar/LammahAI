@@ -57,12 +57,12 @@ const Header = ({ sectionRefs }) => {
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-LammmahBG/90 backdrop-blur-sm z-50 shadow-md">
-      <nav className="container px-4 py-4 ">
-        <div className="flex justify-between items-center">
-          <img src="LammahNoCatchPhrase.png" alt="Lammah Logo" className="h-12" />
+      <nav className=" px-4 py-4 ">
+        <div className="flex xl:justify-center justify-end items-center ">
+          <img src="LammahNoCatchPhrase.png" alt="Lammah Logo" className="h-12 absolute left-4"  />
           
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-6 flex-row-reverse">
+          <div className="hidden xl:flex space-x-6 flex-row-reverse justify-center ">
             {navItems.map((item, index) => (
               <button
                 key={item.id}
@@ -81,7 +81,7 @@ const Header = ({ sectionRefs }) => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-LammahBrown bg-LammmahBG/0"
+            className="xl:hidden text-LammahBrown bg-LammmahBG/0"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -90,7 +90,7 @@ const Header = ({ sectionRefs }) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 bg-LammmahBG/0 rounded-lg ">
+          <div className="xl:hidden mt-4 bg-LammmahBG/0 rounded-lg ">
             <div className="flex flex-col space-y-3 p-4">
               {navItems.map(item => (
                 <button

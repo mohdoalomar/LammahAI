@@ -63,10 +63,7 @@ function App() {
       <Header sectionRefs={sectionRefs} />
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col justify-center items-center">
-          <div className="flex justify-center">
-            
-          </div>
-          <div className="mx-auto" ref={AboutRef}>
+          <div className="mx-auto mt-10 xl:mt-5" ref={AboutRef}>
             <AboutLammah isVisible={isAboutVisible} />
           </div>
         </div>
