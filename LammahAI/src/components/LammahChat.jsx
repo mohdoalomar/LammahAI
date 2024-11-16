@@ -87,7 +87,7 @@ const LammahChat = ({ isVisible, initialPrompt = "مرحبًِا، أنا لمّ
           />
       </h1>
         
-      <div className="min-h-screen bg-LammmahBG p-4 flex items-center justify-center animate-fade-up animate-delay-1000">
+      <div className=" bg-LammmahBG p-4 flex items-center justify-center animate-fade-up animate-delay-1000">
         
         <div className="w-full max-w-3xl bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all">
           {/* Header */}
