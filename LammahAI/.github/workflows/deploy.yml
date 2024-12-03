@@ -36,9 +36,6 @@ jobs:
       - name: Build
         run: npm run build
         
-      - name: Add CNAME File
-        run: echo "lammah.ai" > ./dist/CNAME
-        
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
