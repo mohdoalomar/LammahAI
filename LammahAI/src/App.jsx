@@ -19,14 +19,14 @@ function App() {
     threshold: 0.9,
     rootMargin: "100px",
   });
-  const [statisticsRef, isStatisticsVisible] = useLazyLoad({
-    threshold: 0.9,
-    rootMargin: "100px",
-  });
-  const [chatRef, isChatVisible] = useLazyLoad({
-    threshold: 0.9,
-    rootMargin: "100px",
-  });
+  // const [statisticsRef, isStatisticsVisible] = useLazyLoad({
+  //   threshold: 0.9,
+  //   rootMargin: "100px",
+  // });
+  // const [chatRef, isChatVisible] = useLazyLoad({
+  //   threshold: 0.9,
+  //   rootMargin: "100px",
+  // });
   const [AboutRef, isAboutVisible] = useLazyLoad({
     threshold: 0.9,
     rootMargin: "100px",
@@ -39,10 +39,10 @@ function App() {
     threshold: 0.9,
     rootMargin: "100px",
   });
-  const [operationRef, isOperationVisible] = useLazyLoad({
-    threshold: 0.9,
-    rootMargin: "100px",
-  });
+  // const [operationRef, isOperationVisible] = useLazyLoad({
+  //   threshold: 0.9,
+  //   rootMargin: "100px",
+  // });
   const [SubscriptionsRef, isSubscriptionsVisible] = useLazyLoad({
     threshold: 0.9,
     rootMargin: "100px",
@@ -51,12 +51,8 @@ function App() {
     AboutRef,
     problemRef,
     serviceRef,
-    operationRef,
     SubscriptionsRef,
-    statisticsRef,
-    chatRef,
     formRef,
-    TeamRef,
   };
   return (
     <div className="relative min-h-screen bg-LammmahBG ">
@@ -73,9 +69,9 @@ function App() {
         <div className="mx-auto mt-32" ref={serviceRef}>
           <Services isVisible={isServiceVisible} />
         </div>
-        <div className="mx-auto mt-32" ref={operationRef}>
+        {/* <div className="mx-auto mt-32" ref={operationRef}>
           <OperationsProcess isOperVisible={isOperationVisible} />
-        </div>
+        </div> */}
         <div className="mx-auto mt-32" ref={SubscriptionsRef}>
           <Subscriptions isVisible={isSubscriptionsVisible} />
         </div>
@@ -84,12 +80,12 @@ function App() {
         <div className="mx-auto mt-32" ref={TeamRef}>
           <TeamMembers isVisible={isTeamVisible} />
         </div> */}
-        <div className="mx-auto mt-32" ref={statisticsRef}>
+        {/* <div className="mx-auto mt-32" ref={statisticsRef}>
           <Statistics isVisible={isStatisticsVisible} />
-        </div>
-        <div className="mx-auto mt-32" ref={chatRef}>
+        </div> */}
+        {/* <div className="mx-auto mt-32" ref={chatRef}>
           <LammahChat isVisible={isChatVisible} />
-        </div>
+        </div> */}
         <div className="mx-auto mt-32" ref={formRef}>
           <LammahContactForm isFormVisible={isFormVisible} />
         </div>

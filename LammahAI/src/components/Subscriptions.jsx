@@ -78,7 +78,7 @@ const Subscriptions = ({isVisible}) => {
     },
     {
       name: "رهيب",
-      price: "150 SAR",
+      price: "200 SAR",
       title: ": كل ما هو متضمن في الباقة الأساسية، بالإضافة إلى",
       features: [
         "أدوات كتابة أساسية بدون قيود",
@@ -92,7 +92,7 @@ const Subscriptions = ({isVisible}) => {
     },
     {
       name: "حريف",
-      price: "375 SAR",
+      price: "500 SAR",
       title: ": كل ما هو متضمن في باقة المبدعين، بالإضافة إلى",
       features: [
         "أدوات كتابة متقدمة مع تحليلات",

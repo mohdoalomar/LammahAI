@@ -9,10 +9,7 @@ const Header = ({ sectionRefs }) => {
     { id: 'about', label: 'مين لماح', ref: sectionRefs.AboutRef },
     { id: 'problem', label: 'المشكلة والحل', ref: sectionRefs.problemRef },
     { id: 'services', label: 'الدبرة', ref: sectionRefs.serviceRef },
-    { id: 'operations', label: 'طريقة الشغل', ref: sectionRefs.operationRef },
     { id: 'subscriptions', label: 'الدراهم', ref: sectionRefs.SubscriptionsRef },
-    { id: 'statistics', label: 'الإحصائيات', ref: sectionRefs.statisticsRef },
-    { id: 'chat', label: 'جرب لمّاح', ref: sectionRefs.chatRef },
     { id: 'contact', label: 'نموذج التواصل', ref: sectionRefs.formRef }
   ];
 
