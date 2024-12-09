@@ -5,10 +5,6 @@ import Subscriptions from "./components/Subscriptions";
 import AboutLammah from "./components/AboutLammah";
 import ProblemSolutionSlides from "./components/ProblemSolutionsSlides";
 import Services from "./components/Services";
-import OperationsProcess from "./components/OperationProcess";
-import TeamMembers from "./components/TeamMembers";
-import Statistics from "./components/Statistics";
-import LammahChat from "./components/LammahChat";
 import Header from "./components/Header";
 function App() {
   const [formRef, isFormVisible] = useLazyLoad({
