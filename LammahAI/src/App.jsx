@@ -89,13 +89,13 @@ function App() {
       <div className="w-full h-36 bg-LammahBrown text-LammmahBG flex flex-col lg:flex-row justify-center lg:gap-32 items-center" >
       <a 
             href="tel:966566619193" 
-            className="hover:text-amber-200 transition-colors"
+            className="hover:text-amber-200 hover:scale-110 transition-all duration-200"
           >
             +966 56 661 9193
           </a>
           <a 
             href="mailto:LAMMAH.AI.KSA@gmail.com"
-            className="hover:text-amber-200 transition-colors"
+            className="hover:text-amber-200  hover:scale-110 transition-all duration-200"
           >
             LAMMAH.AI.KSA@gmail.com
           </a>
